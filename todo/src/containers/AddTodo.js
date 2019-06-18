@@ -6,8 +6,9 @@ const AddTodo = ({ dispatch }) => {
   let input;
 
   return (
-    <div>
+    <div className="container row">
       <form
+        className="col s8 offset-s2"
         onSubmit={e => {
           e.preventDefault();
           if (!input.value.trim()) {
@@ -17,8 +18,7 @@ const AddTodo = ({ dispatch }) => {
           input.value = "";
         }}
       >
-        <input ref={node => (input = node)} />
-        <button type="submit">Add Todo</button>
+        <input placeholder="type a todo here, hit enter to add" ref={node => (input = node)} />
       </form>
     </div>
   );
