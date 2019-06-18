@@ -15,7 +15,7 @@ class AddTodos extends React.Component {
     e.preventDefault();
     this.props.addTodo(this.state);
     this.setState({
-      content: ''
+      content: '',
     })
   }
 
